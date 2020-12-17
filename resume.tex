@@ -1,0 +1,348 @@
+%
+% LaTeX source of my resume
+% =========================
+%
+% Heavily commented to to fit even LaTeX beginners (hopefully).
+%
+% See the `README.md` file for more info.
+%
+% This file is licensed under the CC-NC-ND Creative Commons license.
+%
+
+% Start a document with the here given default font size and paper size.
+\documentclass[10pt,letterpaper]{article}
+
+% Set the page margins.
+\usepackage[papersize={8.5in,11in},margin=0.35in]{geometry}
+
+% Setup the language.
+\usepackage[english]{babel}
+\hyphenation{Some-long-word}
+
+% Makes resume-specific commands available.
+\usepackage{resume}
+
+\begin{document}  % begin the content of the document
+\sloppy  % this to relax whitespacing in favour of straight margins
+
+% title on top of the document
+\maintitle{Li-Pang Huang (Leo)}{}
+
+\nobreakvspace{0.3em}  % add some page break averse vertical spacing
+
+% \noindent prevents paragraph's first lines from indenting
+% \mbox is used to obfuscate the email address
+% \sbull is a spaced bullet
+% \href well..
+% \\ breaks the line into a new paragraph
+\noindent\href{mailto:lh5jv@virginia.edu}{huanglipang\mbox{}@\mbox{}virginia.edu}\sbull
+434 242 3507\sbull
+\href{https://huanglipang.me}{huanglipang.me}\sbull
+\href{https://github.com/HuangLiPang/}{github.com/HuangLiPang}\sbull
+\href{https://www.linkedin.com/in/huanglipang/}{linkedin.com/in/huanglipang/}
+% Charlottesville, VA
+%\\
+%Taipei\sbull
+%Taiwan
+\spacedhrule{0.5em}{-0.6em}  % a horizontal line with some vertical spacing before and after
+
+% \roottitle{Summary}  % a root section title
+
+% \vspace{-1.3em}  % some vertical spacing
+% \begin{multicols}{2}  % open a multicolumn environment
+% \noindent
+% \textbf{Software Engineer} particularly interested in distributed system, programming language (FP), and software infrastructure.
+% Prolific open-sourcer with over 100 Github repos and patches accepted into over 20 projects.
+% Passionate learner and researcher for cutting-edge technologies and solving hard problems.
+% \end{multicols}
+
+% \spacedhrule{0em}{-0.4em}
+\roottitle{Education}
+
+\headedsection
+  {University of Virginia}
+  {Charlottesville, Virginia} {
+  \headedsubsection
+    {Master of Science, Computer Science, GPA: 4.0/4.0}
+    {Expected graduate in Dec. 2020}
+    {\bodytext{
+      \vspace{0.2em} Focused on Cyber-Physical Systems and jointly in \href{https://engineering.virginia.edu/link-lab/education/nrt-prospective-students}{National Science Foundation Research Traineeship Program}}
+    }
+}
+
+\vspace{0.5em}
+
+\headedsection
+  {National Cheng Kung University}
+  {Tainan, Taiwan} {%
+  \headedsubsection
+    {Bachelor of Science, Systems and Naval Mechatronic Engineering}
+    {Graduated in June 2014}
+    {}
+}
+
+\spacedhrule{0.3em}{-0.6em}
+
+\roottitle{Skills}
+
+\inlineheadsection
+  {Programming Languages:}
+  {Nodejs, JavaScript, Python, C, Java, Linux Bash, CSS, HTML}
+  \vspace{0.1em}
+\inlineheadsection
+  {Libraries and Frameworks:}
+  {Express, Leaflet, Mapbox, Reactjs, Material-UI, MongoDB, PostgreSQL, CassandraDB, Docker}
+% \inlineheadsection
+%   {Tools:}
+%   {gdb, edb, IDA, Intel Pin, Vagrant, Valgrind}
+% \inlineheadsection
+%   {Serverless:}
+%   {AWS, Heroku, DigitalOcean, GitHub, Netlify}
+% \inlineheadsection
+%   {Embedded Systems:}
+%   {Raspberry Pi, ARTIK, imix, TockOS, LinkIt One, Arduino}  
+% \inlineheadsection
+%   {Framworks and Libraries:}
+%   {KairosDB, CassandraDB, MongoDB, Expressjs, Docker, Vagrant, Leaflet, Mapbox, jQuery, D3js}
+
+\vspace{0.5em}
+\spacedhrule{0.5em}{-0.6em}
+
+\roottitle{Work Experience}
+
+\vspace{0.3em}
+
+\headedsection  % sets the header for the section and includes any subsections
+  {University of Virginia DevHub}
+  {{Charlottesville, Virginia}} {%
+  \vspace{0.2em}
+  \headedsubsection
+    {Software Engineer Intern}
+    {Nov. 2019 -- Present}
+    {\bodytext{
+      \begin{itemize}
+        \begin{description}
+          \item [-] Built a dashboard for visualizing time-series data and modifying metadata.
+          \item [-] Developed an authentication API for accessing sensor data using AWS EC2, Cognito, API Gateway, and Lambda.
+          \item [-] Constructed an ingest application for extract-transform-load sensor data to the database.
+        \end{description}
+      \end{itemize}
+    }}
+}
+
+\vspace{0.2em}
+
+\headedsection  % sets the header for the section and includes any subsections
+  {Motivf}
+  {{Arlington, Virginia}} {%
+  \vspace{0.2em}
+  \headedsubsection
+    {Software Engineer and GIS Intern (Remote)}
+    {June 2020 -- Aug. 2020}
+    {\bodytext{
+      \begin{itemize}
+        \begin{description}
+          \item [-] Created a \href{https://stacspec.org/}{STAC} data model for imagery metadata from \href{https://www.fsa.usda.gov/programs-and-services/aerial-photography/imagery-programs/naip-imagery/}{NAIP}.
+          \item [-] Developed a CLI tool to process data pipelines and extract-transform-load of 851,000+ imagery metadata to the STAC API.
+          \item [-] Enhanced the CLI tool with the feature that has the ability to re-ingest the imagery from error messages.
+          \item [-] Built a web application for searching and visualizing NAIP imagery on the map.
+        \end{description}
+      \end{itemize}
+    }}
+}
+
+\vspace{0.2em}
+
+\headedsection  % sets the header for the section and includes any subsections
+  {Academia Sinica}
+  {Taipei, Taiwan} {
+  \vspace{0.2em}
+  \headedsubsection
+    {Research Assistant}
+    {Mar. 2018 -- Jul. 2019}
+    {\bodytext{
+      \vspace{0.2em}
+      \begin{itemize}
+        \item \textbf{PM2.5 Data Visualization} (PM2.5 is an air pollution particle.)
+          \begin{description}
+          \item [-] Developed \href{https://pm25.lass-net.org/GIS/IDW/}{Inverse Distance Weighting (IDW) Map} and \href{https://pm25.lass-net.org/GIS/voronoi/}{Voronoi Map}.
+          \item [-] Improved the IDW algorithm from the original 3,500+ ms to at most 400 ms and at least 50 ms depending on the area.
+          \item [-] Contributed the improved IDW algorithm to \href{https://github.com/JoranBeaufort/Leaflet.idw}{Leaflet.idw} - an \textbf{open source project} of \href{https://leafletjs.com}{Leaflet} plugins.
+          \item [-] Enhanced the visualization by adding functional layers, such as different sources, contours, stations, etc.
+        %   \item [-] Deployed the website with Git.
+        \end{description}
+        \item \textbf{Backend Distributed Systems of \href{https://pm25.lass-net.org/}{PM2.5 Open Data Portal}}
+        \begin{description}
+          \item [-] Reduced at least 720 queries per day by optimizing the IDW map snapshot process.
+          \item [-] Automated routine processes including generating open data for the API, visualization preprocessing, etc.
+          \item [-] Developed RESTful API for large size (2GB+) PM2.5 data retrieving.
+        \end{description}
+        % \item \textbf{Deployment of Air Quality Sensors:}
+        % \begin{description}
+        %   \item [-] Deployed 1,000+ outdoor air quality sensors in 9 cities in \href{https://ci.taiwan.gov.tw/}{Civil IoT Taiwan}.
+        %   \item [-] Deployed 20+ indoor air quality sensors in 4 nursing homes each with Taiwan CDC.
+        % \end{description}
+      \end{itemize}
+    }}
+}
+
+\vspace{0.2em}
+
+\headedsection  % sets the header for the section and includes any subsections
+  {Evergreen Marine Corp.}
+  {{Taoyuan, Taiwan}} {%
+  \vspace{0.2em}
+  \headedsubsection
+    {Assistant Engineer}
+    {Sep. 2015 -- Jul. 2017}
+    {\bodytext{
+      \begin{itemize}
+        \item \href{https://route.robodock.net/}{\textbf{Fleet Position Web Application}}
+        \begin{description}
+          \item [-] Visualized the fleets of 125+ containers on the map that facilitates the workflow of seafarers on the ships as well as colleagues in Maritech Department.
+          \item [-] Integrated the route information with weather data which speeds up the analysis of fleet route.
+          \item [-] Provided route data for download which reduce routine works of 2nd Officers (2/O) on the container. (Normally it takes 2/O 2 weeks to complete the routine work.)
+        \end{description}
+        \item \href{https://line.me/R/ti/p/nocrvlaXsY/}{\textbf{Line Bot Fleet Position Echoer}}
+        \begin{description}
+          \item [-] Created a chatbot in Line application.
+          \item [-] Provided an interface for querying the information of the fleets.
+       \end{description}
+     \end{itemize}
+    }}
+}
+
+% \vspace{0.2em}
+
+% \spacedhrule{0em}{-0.4em}
+
+% \roottitle{Skills}
+
+% \vspace{0.2em}
+
+% \inlineheadsection
+%   {Programming Languages:}
+%   {Proficient in Scala, Haskell, Java, Go, Rust and many other prior-experienced.}
+
+% \vspace{0.2em}
+
+% \inlineheadsection  % special section that has an inline header with a 'hanging' paragraph
+%   {Specialties:}
+%   {Distributed System, Functional Programming, Web Backend, Software Infrastructure.}
+
+% \vspace{0.2em}
+% \inlineheadsection
+%   {Tools \& Frameworks:}
+%   {Akka Toolkit, Play Framework, Cats, Cats-Effect, Fs2, gRPC, ScalaTest, Junit, Jmh, MySQL, Redis, Etcd, Kafka, Spark, OpenWhisk, Kubernetes, Docker, Travis CI, Git, GCP.}
+
+\spacedhrule{0.5em}{-0.6em}
+
+\roottitle{Projects}
+
+\vspace{0.2em}
+\headedsection
+  {{\textbf{Privacy Policy on Distributed IoT Platform}}}
+  {\bodytext{
+  \begin{itemize}
+    \item Designed mechanisms for handling application management.
+    \item Implemented method for enforcing data privacy policy.
+  \end{itemize}}
+}
+
+\vspace{0.2em}
+\headedsection
+  {\href{https://search-million-rows.huanglipang.me/}{\textbf{Search Million Rows}}}
+  {\bodytext{
+  \begin{itemize}
+    \item Created an application that can search words from a dictionary with more than 2 million words within a few milliseconds.
+    \item Hosted the application on Heroku and Mongodb Atlas.
+  \end{itemize}}
+}
+
+% \vspace{0.2em}
+% \headedsection
+%   {\href{http://bit.ly/linebot-reminder}{\textbf{Line Bot Reminder}}}
+%   {\bodytext{
+%   \begin{itemize}
+%     \item Created a serverless reminder template which can remind users from Line app. 
+%     \item Built on Heroku scheduler add-on.
+%   \end{itemize}}
+% }
+
+% \vspace{0.2em}
+% \headedsection
+%   {\href{https://github.com/HuangLiPang/python-logging-template-RotatingFileNameHandler}{\textbf{Rotating File Name Handler}}}
+%   {\bodytext{
+%   \begin{itemize}
+%     \item Developed a Python logging plugin which combined the rotating log files with the customized file name.
+%   \end{itemize}}
+% }
+
+% \vspace{0.2em}
+% \headedsection
+%   {\href{https://github.com/HuangLiPang/Stanford-University-Algorithms}{\textbf{Algorithms}}}
+%   {\bodytext{
+%   \begin{itemize}
+%     \item Implemented 16 algorithms using C.
+%   \end{itemize}}
+% }
+
+% \spacedhrule{0.5em}{-0.6em}
+
+% \roottitle{OSS Experience}
+
+% \vspace{0.2em}
+
+% \inlineheadsection
+%   {{Apache OpenWhisk}:}
+%   {Contributing to experimental scheduler performance improvement and minor fixes on distributed tracing, 
+%   refactoring and build system, etc.}
+
+% \vspace{0.2em}
+
+% \inlineheadsection
+%   {Akka Toolkit:}
+%   {Contributing to \href{https://github.com/akka/akka/commits/master?author=tz70s}{Akka} and \href{https://github.com/akka/akka-grpc/commits/master?author=tz70s}{Akka gRPC}.}
+
+% \vspace{0.2em}
+
+% \inlineheadsection
+%   {Over 100+ repos and OSS contributions (20+ projects) can be found on my \href{https://github.com/tz70s}{Github page}.}
+
+% \spacedhrule{1.6em}{-0.4em}
+
+% \roottitle{Publication}
+
+% % \vspace{0.2em}
+
+% \inlineheadsection
+%   {Li-Pang Huang,}
+%   {Ming-Hong Hong, Cyuan-Heng Luo, Sachit Mahajan, Ling-Jyh Chen, \emph{"A Vector Mosquitoes Classification System Based on Edge Computing and Deep Learning"}, 2018 Conference on Technologies and Applications of Artificial Intelligence (TAAI 2018)}
+%   \vspace{0.5em}
+%   \begin{description}    
+%     \item [-] \textbf{Best Paper Award}
+%   \end{description}
+
+% \spacedhrule{0.1em}{-0.1em}
+
+
+% \roottitle{Leadership}
+
+% \vspace{0.2em}
+% \headedsection  % sets the header for the section and includes any subsections
+%   {6th International Roboboat Competition, \href{https://www.auvsi.org}{AUVSI}}
+%   {Virginia Beach, VA} {%
+%   \vspace{0.2em}
+%   \headedsubsection
+%     {NCKU Team Leader}
+%     {Oct. 2012 -- Jul. 2013}
+%     {\bodytext{
+%       \begin{itemize}
+%         \item Won \href{https://www.robonation.org/node/158}{\emph{"No Guts, No Glory"} award} with USD 500.
+%         \item Coordinated the general arrangement to balance the load and strategize the competition.
+%         \item Designed the trimaran (triple-hull boat) which can be parted and assembled to fit the flight regulation.
+%         \item Designed the mechanical arm for catching the flag stage.
+% \end{itemize}}}
+% }
+
+\end{document}
