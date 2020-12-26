@@ -36,10 +36,10 @@
 % \href well..
 % \\ breaks the line into a new paragraph
 \noindent\href{mailto:lh5jv@virginia.edu}{huanglipang\mbox{}@\mbox{}virginia.edu}\sbull
-434 242 3507\sbull
-\href{https://huanglipang.me}{huanglipang.me}\sbull
+% 434 242 3507\sbull
 \href{https://github.com/HuangLiPang/}{github.com/HuangLiPang}\sbull
-\href{https://www.linkedin.com/in/huanglipang/}{linkedin.com/in/huanglipang/}
+\href{https://www.linkedin.com/in/huanglipang/}{linkedin.com/in/huanglipang}\sbull
+\href{https://huanglipang.me}{huanglipang.me}
 % Charlottesville, VA
 %\\
 %Taipei\sbull
@@ -91,7 +91,7 @@
   \vspace{0.1em}
 \inlineheadsection
   {Libraries and Frameworks:}
-  {Express, Leaflet, Mapbox, Reactjs, Material-UI, MongoDB, PostgreSQL, CassandraDB, Docker}
+  {Express, Leaflet, Mapbox, Reactjs, Material-UI, Docker, MongoDB, PostgreSQL, CassandraDB}
 % \inlineheadsection
 %   {Tools:}
 %   {gdb, edb, IDA, Intel Pin, Vagrant, Valgrind}
@@ -122,9 +122,9 @@
     {\bodytext{
       \begin{itemize}
         \begin{description}
-          \item [-] Built a dashboard for visualizing time-series data and modifying metadata.
-          \item [-] Developed an authentication API for accessing sensor data using AWS EC2, Cognito, API Gateway, and Lambda.
-          \item [-] Constructed an ingest application for extract-transform-load sensor data to the database.
+          \item [-] Built a dashboard using \textbf{Reactjs} and \textbf{Material-UI} for visualizing time-series data and modifying metadata.
+          \item [-] Developed an authentication API for accessing sensor data using \textbf{Express}, \textbf{AWS EC2}, \textbf{Cognito}, \textbf{API Gateway}, and \textbf{Lambda}.
+          \item [-] Constructed a data ingestion application for extract-transform-load sensor data to \textbf{OpenTSDB} and \textbf{PosgreSQL}.
         \end{description}
       \end{itemize}
     }}
@@ -142,10 +142,10 @@
     {\bodytext{
       \begin{itemize}
         \begin{description}
-          \item [-] Created a \href{https://stacspec.org/}{STAC} data model for imagery metadata from \href{https://www.fsa.usda.gov/programs-and-services/aerial-photography/imagery-programs/naip-imagery/}{NAIP}.
-          \item [-] Developed a CLI tool to process data pipelines and extract-transform-load of 851,000+ imagery metadata to the STAC API.
-          \item [-] Enhanced the CLI tool with the feature that has the ability to re-ingest the imagery from error messages.
-          \item [-] Built a web application for searching and visualizing NAIP imagery on the map.
+          \item [-] Created a \href{https://stacspec.org/}{STAC} data model for imagery metadata from \href{https://www.fsa.usda.gov/programs-and-services/aerial-photography/imagery-programs/naip-imagery/}{NAIP} using \textbf{Python Pydantic}.
+          \item [-] Developed a CLI tool using \textbf{Python Click} to process extract-transform-load of 851,000+ imagery metadata to the STAC API.
+          \item [-] Enhanced the CLI tool with the feature to re-ingest the imagery from error messages.
+          \item [-] Built a web application for searching and visualizing NAIP imagery on the map using \textbf{Reactjs} and \textbf{Material-UI}.
         \end{description}
       \end{itemize}
     }}
@@ -165,7 +165,7 @@
       \begin{itemize}
         \item \textbf{PM2.5 Data Visualization} (PM2.5 is an air pollution particle.)
           \begin{description}
-          \item [-] Developed \href{https://pm25.lass-net.org/GIS/IDW/}{Inverse Distance Weighting (IDW) Map} and \href{https://pm25.lass-net.org/GIS/voronoi/}{Voronoi Map}.
+          \item [-] Developed \href{https://pm25.lass-net.org/GIS/IDW/}{Inverse Distance Weighting (IDW) Map} and \href{https://pm25.lass-net.org/GIS/voronoi/}{Voronoi Map} using \textbf{Mapbox} and \textbf{Leaflet}.
           \item [-] Improved the IDW algorithm from the original 3,500+ ms to at most 400 ms and at least 50 ms depending on the area.
           \item [-] Contributed the improved IDW algorithm to \href{https://github.com/JoranBeaufort/Leaflet.idw}{Leaflet.idw} - an \textbf{open source project} of \href{https://leafletjs.com}{Leaflet} plugins.
           \item [-] Enhanced the visualization by adding functional layers, such as different sources, contours, stations, etc.
@@ -173,7 +173,7 @@
         \end{description}
         \item \textbf{Backend Distributed Systems of \href{https://pm25.lass-net.org/}{PM2.5 Open Data Portal}}
         \begin{description}
-          \item [-] Reduced at least 720 queries per day by optimizing the IDW map snapshot process.
+          \item [-] Reduced at least 720 queries per day by optimizing the IDW map snapshot process using \textbf{Python}.
           \item [-] Automated routine processes including generating open data for the API, visualization preprocessing, etc.
           \item [-] Developed RESTful API for large size (2GB+) PM2.5 data retrieving.
         \end{description}
@@ -197,15 +197,15 @@
     {Sep. 2015 -- Jul. 2017}
     {\bodytext{
       \begin{itemize}
-        \item \href{https://route.robodock.net/}{\textbf{Fleet Position Web Application}}
+        \item \textbf{Fleet Position Web Application}
         \begin{description}
           \item [-] Visualized the fleets of 125+ containers on the map that facilitates the workflow of seafarers on the ships as well as colleagues in Maritech Department.
-          \item [-] Integrated the route information with weather data which speeds up the analysis of fleet route.
+          \item [-] Integrated the route information with weather data from \textbf{Windy API} which speeds up the analysis of fleet route.
           \item [-] Provided route data for download which reduce routine works of 2nd Officers (2/O) on the container. (Normally it takes 2/O 2 weeks to complete the routine work.)
         \end{description}
         \item \href{https://line.me/R/ti/p/nocrvlaXsY/}{\textbf{Line Bot Fleet Position Echoer}}
         \begin{description}
-          \item [-] Created a chatbot in Line application.
+          \item [-] Created a chatbot in Line application using \textbf{line-bot-sdk-nodejs}.
           \item [-] Provided an interface for querying the information of the fleets.
        \end{description}
      \end{itemize}
@@ -237,15 +237,15 @@
 
 \spacedhrule{0.5em}{-0.6em}
 
-\roottitle{Projects}
+\roottitle{\href{https://github.com/HuangLiPang/HuangLiPang/blob/master/Projects.md}{Projects}}
 
 \vspace{0.2em}
 \headedsection
-  {{\textbf{Privacy Policy on Distributed IoT Platform}}}
+  {{\textbf{Privacy Policy on \href{https://github.com/nabeeln7/on-the-edge}{Distributed IoT Platform}}}}
   {\bodytext{
   \begin{itemize}
-    \item Designed mechanisms for handling application management.
-    \item Implemented method for enforcing data privacy policy.
+    \item Designed mechanisms for handling application management using \textbf{Nodejs}, \textbf{Express}, \textbf{MQTT}, \textbf{child\_process}, etc.
+    \item Implemented methods for enforcing data privacy policy using \textbf{cron-parser library}.
   \end{itemize}}
 }
 
@@ -254,8 +254,9 @@
   {\href{https://search-million-rows.huanglipang.me/}{\textbf{Search Million Rows}}}
   {\bodytext{
   \begin{itemize}
-    \item Created an application that can search words from a dictionary with more than 2 million words within a few milliseconds.
-    \item Hosted the application on Heroku and Mongodb Atlas.
+    \item Created an application that can let user search words from a dictionary with more than 2 million words in a few milliseconds.
+    \item Hosted the serverless application on \textbf{Heroku} and \textbf{Mongodb Atlas}.
+    \item Fine-tuned Mongodb using \textbf{Text Indexes}.
   \end{itemize}}
 }
 
